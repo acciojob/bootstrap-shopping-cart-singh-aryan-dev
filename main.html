@@ -1,16 +1,254 @@
 <!DOCTYPE html>
-
 <html>
-
 <head>
-	<link rel="stylesheet" href="styles.css">
+
+  <title>Shopping Cart</title>
+
+  <link rel="stylesheet" href="styles.css">
+  <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+  />
+	
+
+  <style>
+    body {
+      background-color: #ebebeb;
+    }
+
+    .block-heading h1,
+    .block-heading h2,
+    .product-name a {
+      color: #3b99e0;
+    }
+
+    .summary {
+      background-color: #f7fbff;
+      border-top: 3px solid #5ea4f3;
+    }
+
+    .btn-checkout {
+      background-color: #3b99e0;
+    }
+
+    .btn-checkout:hover {
+      background-color: #2a7fc4;
+    }
+
+    .quantity-box {
+      width: 64px;
+    }
+  </style>
 </head>
 
 <body>
-	<!-- the entire body must be written by student -->
-    <script type="text/javascript" src="./script.js">
+
+  <div class="container">
+
+    <!-- Block Heading -->
+    <div class="block-heading text-center pt-5 pb-4">
+      <h1 class="fs-2 fw-semibold mb-2">Shopping cart</h1>
+
+      <h2 class="fs-5 fw-normal mb-3">Your selected items</h2>
+
+      <p class="text-secondary small mx-auto lh-lg" style="max-width:380px;">
+        The customer is very important, the customer will be followed by the customer.
+        Now, as an urn, I have no right to be in possession of property.
+      </p>
+    </div>
+
+    <!-- Cart Card -->
+    <div class="cart-card bg-white rounded shadow-sm overflow-hidden mb-5">
+
+      <div class="row g-0">
+
+        <!-- Products Column -->
+        <div class="col-lg-8 border-end">
+
+          <!-- Product 1 -->
+          <div class="product p-4 border-bottom">
+
+            <div class="row align-items-center g-2">
+
+              <div class="col-auto">
+                <img
+                  src="https://store.storeimages.cdn-apple.com/4668/as-images.apple.com/is/iphone-12-pro-gold-select?wid=200&hei=236&fmt=png-alpha"
+                  alt="iPhone 12 Pro"
+                  class="img-fluid"
+                  style="width:70px;"
+                />
+              </div>
+
+              <div class="col">
+                <div class="product-name fw-semibold small mb-1">
+                  <a href="#" class="text-decoration-none">
+                    I am very sorry
+                  </a>
+                </div>
+
+                <p class="text-muted small lh-lg mb-0">
+                  Display: 5 inches<br>
+                  RAM: 4GB<br>
+                  Memory: 32GB
+                </p>
+              </div>
+
+              <div class="col-auto text-center">
+                <div class="small text-dark mb-1">Quantity:</div>
+
+                <input
+                  type="number"
+                  class="quantity-box form-control text-center"
+                  value="0"
+                  min="0"
+                />
+              </div>
+
+              <div class="col-auto">
+                <span class="fs-5 fw-semibold text-dark">$120</span>
+              </div>
+
+            </div>
+          </div>
+
+          <!-- Product 2 -->
+          <div class="product p-4 border-bottom">
+
+            <div class="row align-items-center g-2">
+
+              <div class="col-auto">
+                <img
+                  src="https://store.storeimages.cdn-apple.com/4668/as-images.apple.com/is/iphone-12-pro-gold-select?wid=200&hei=236&fmt=png-alpha"
+                  alt="iPhone 12 Pro"
+                  class="img-fluid"
+                  style="width:70px;"
+                />
+              </div>
+
+              <div class="col">
+                <div class="product-name fw-semibold small mb-1">
+                  <a href="#" class="text-decoration-none">
+                    I am very sorry
+                  </a>
+                </div>
+
+                <p class="text-muted small lh-lg mb-0">
+                  Display: 5 inches<br>
+                  RAM: 4GB<br>
+                  Memory: 32GB
+                </p>
+              </div>
+
+              <div class="col-auto text-center">
+                <div class="small text-dark mb-1">Quantity:</div>
+
+                <input
+                  type="number"
+                  class="quantity-box form-control text-center"
+                  value="1"
+                  min="0"
+                />
+              </div>
+
+              <div class="col-auto">
+                <span class="fs-5 fw-semibold text-dark">$120</span>
+              </div>
+
+            </div>
+          </div>
+
+          <!-- Product 3 -->
+          <div class="product p-4">
+
+            <div class="row align-items-center g-2">
+
+              <div class="col-auto">
+                <img
+                  src="https://store.storeimages.cdn-apple.com/4668/as-images.apple.com/is/iphone-12-pro-gold-select?wid=200&hei=236&fmt=png-alpha"
+                  alt="iPhone 12 Pro"
+                  class="img-fluid"
+                  style="width:70px;"
+                />
+              </div>
+
+              <div class="col">
+                <div class="product-name fw-semibold small mb-1">
+                  <a href="#" class="text-decoration-none">
+                    I am very sorry
+                  </a>
+                </div>
+
+                <p class="text-muted small lh-lg mb-0">
+                  Display: 5 inches<br>
+                  RAM: 4GB<br>
+                  Memory: 32GB
+                </p>
+              </div>
+
+              <div class="col-auto text-center">
+                <div class="small text-dark mb-1">Quantity:</div>
+
+                <input
+                  type="number"
+                  class="quantity-box form-control text-center"
+                  value="1"
+                  min="0"
+                />
+              </div>
+
+              <div class="col-auto">
+                <span class="fs-5 fw-semibold text-dark">$120</span>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Summary Column -->
+        <div class="col-lg-4">
+
+          <div class="summary p-4 h-100">
+
+            <h5 class="fw-bold fs-6 text-center mb-4 text-dark">
+              Summary
+            </h5>
+
+            <div class="d-flex justify-content-between py-2 border-bottom small text-secondary">
+              <span>Subtotal</span>
+              <span>$360</span>
+            </div>
+
+            <div class="d-flex justify-content-between py-2 border-bottom small text-secondary">
+              <span>Discount</span>
+              <span>$0</span>
+            </div>
+
+            <div class="d-flex justify-content-between py-2 border-bottom small text-secondary">
+              <span>Shipping</span>
+              <span>$0</span>
+            </div>
+
+            <div class="d-flex justify-content-between py-2 fw-bold small text-dark">
+              <span>Total</span>
+              <span>$360</span>
+            </div>
+
+            <button class="btn btn-checkout text-white w-100 mt-4 fw-semibold py-2">
+              checkout
+            </button>
+
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+
+  <script type="text/javascript" src="./script.js">
 </script>
 
 </body>
-
 </html>
